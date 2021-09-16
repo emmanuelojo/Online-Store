@@ -32,8 +32,8 @@ export default {
         hour = minute * 60,
         day = hour * 24;
 
-      let birthday = "Dec 25, 2021 00:00:00",
-        countDown = new Date(birthday).getTime(),
+      let salesDay = "Dec 25, 2021 00:00:00",
+        countDown = new Date(salesDay).getTime(),
         x = setInterval(()=> {
           let now = new Date().getTime(),
             distance = countDown - now;
@@ -57,7 +57,7 @@ export default {
               countdown = document.getElementById("countdown"),
               content = document.getElementById("content");
 
-            headline.innerText = "It's my birthday!";
+            headline.innerText = "It's my salesDay!";
             countdown.style.display = "none";
             content.style.display = "block";
 
@@ -93,10 +93,6 @@ hr{
   margin: 20px 50px 50px 50px; 
 }
 .deal-info{
-  /* margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto; */
   margin: auto;
   width: 60%;
 }
@@ -115,7 +111,6 @@ hr{
 li {
   display: inline-block;
   font-size: 12px;
-  /* font-size: 1.5em; */
   list-style-type: none;
   padding: 1em;
   text-transform: uppercase;
@@ -124,7 +119,6 @@ li {
 li span {
   display: block;
   font-size: 35px;
-  /* font-size: 4.5rem; */
   color: goldenrod;
 }
 .deal-info a {
@@ -136,12 +130,10 @@ li span {
 }
 .deal-img{
   width: 40%;
-  /* margin-right: 100px; */
 }
 .deal-img img{
   height: 500px;
   width: 100%;
-  /* width: 400px; */
   object-fit: cover;
 }
 
@@ -158,10 +150,8 @@ li span {
     width: 320px;
   }
   .deal-img img{
-    /* width: 250px; */
     margin-top: 20px;
     width: 320px;
-    /* width: 100vw; */
     height: 250px;
     object-fit: cover;
   }
@@ -170,12 +160,9 @@ li span {
   .deal-info p{
     margin-top: 40px;
   }
-  /* .deal-img {
-    width: 740px;
-  } */
+  
   .deal-img img{
-    margin-top: 20px;
-    width: 665px;
+    width: 100%;
     object-fit: cover;
   }
 }

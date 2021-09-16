@@ -1,52 +1,50 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="navbar-brand">
-      <img src="@/assets/logo.png" alt="" srcset="" />
-    </div>
-
-    <div class="search-bar">
-      <!-- <Search v-model="search" /> -->
-      <input
-        type="text"
-        v-model="search"
-        :search="search"
-        placeholder="Search ..."
-      />
-      <i class="fa fa-search"></i>
-    </div>
-
-    <div class="icon-btns">
-      <i class="fa fa-bars"></i>
-      <i class="fa fa-heart"></i>
-      <div class="cart">
-        <p> {{ cartItemCount }} </p>
-        <router-link :to="{ name: 'cart' }" class="router"
-              ><i class="fa fa-shopping-cart" id="cart"></i
-            ></router-link>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="navbar-brand">
+        <img src="@/assets/logo.png" alt="" srcset="" />
       </div>
-      <router-link :to="{ name: 'login' }">
-        <i class="fa fa-user"></i>
-      </router-link>
-    </div>
 
-    
-  </nav>
+      <div class="search-bar">
+        <!-- <Search v-model="search"
+        :search="search" /> -->
+        <input type="text" v-model="search" placeholder="Search ..." />
+        <i class="fa fa-search"></i>
+      </div>
+
+      <div class="icon-btns">
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-heart"></i>
+        <div class="cart">
+          <p>{{ cartItemCount }}</p>
+          <router-link :to="{ name: 'cart' }" class="router"
+            ><i class="fa fa-shopping-cart" id="cart"></i
+          ></router-link>
+        </div>
+        <!-- <router-link :to="{ name: 'login' }"> -->
+        <router-link :to="{ name: 'Home' }">
+          <i class="fa fa-user"></i>
+        </router-link>
+      </div>
+    </nav>
+    <!-- <product-list :search="search"></product-list> -->
+  </div>
 </template>
 
 <script>
+// import ProductList from './ProductList.vue';
 // import Search from '@/components/Search.vue'
 export default {
+  // components: { ProductList },
   // components: { Search },
   // inject: ['searchName'],
+  provide: ["searchWord"],
   data() {
     return {
       search: "",
       // search: "",
       // search: this.searchName,
     };
-  },
-  mounted() {
-    console.warn(this.search, "debugginnngggg...");
   },
   computed: {
     cartItemCount() {
@@ -106,7 +104,7 @@ export default {
   /* position: absolute; */
   margin-left: -30px;
 }
-.icon-btns{
+.icon-btns {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -129,13 +127,13 @@ export default {
   cursor: pointer;
   transition: 0.5s ease;
 }
-.cart{
+.cart {
   display: flex;
   position: relative;
   /* background: #fff;
   border-radius: 50%; */
 }
-.cart p{
+.cart p {
   position: absolute;
   color: goldenrod;
   font-size: 12px;
@@ -144,10 +142,10 @@ export default {
   /* margin-left: 30px; */
   padding-top: 6px;
 }
-.cart:hover p{
+.cart:hover p {
   color: #ffff;
-}  
-.cart a i{
+}
+.cart a i {
   padding-top: 12px;
   padding-left: 12px;
 }
@@ -158,14 +156,14 @@ export default {
     margin-top: 20px;
     margin-right: 30px;
   } */
-  .navbar .search-bar input{
+  .navbar .search-bar input {
     /* width: 30px; */
     width: 130px;
     /* margin-left: -50px;
     margin-top: 20px; */
     margin-left: -5px;
   }
-  .navbar .search-bar i{
+  .navbar .search-bar i {
     /* margin: auto; */
     /* margin-left: 2px; */
     /* padding-left: 5px; */

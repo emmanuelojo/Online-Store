@@ -33,11 +33,12 @@ export default {
 <style scoped>
 .main {
   width: 90%;
-  margin: auto;
+  /* margin: auto; */
 }
 
 h3 {
   margin-top: 50px;
+  margin-left: 45px;
   text-transform: uppercase;
   font-weight: bold;
   text-align: left;
@@ -96,12 +97,18 @@ h3 span {
 @media screen and (max-width: 480px) {
   .main{
     display: grid;
+    width: 100%;
   }
   .hero{
+    display: grid;
     width: 320px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .category-card{
+    width: 320px;
+  }
+  .category-card img {
     width: 320px;
   }
 }

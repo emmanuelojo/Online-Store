@@ -12,6 +12,11 @@ import user1 from '@/assets/images/user1.png'
 import user2 from '@/assets/images/user2.png'
 import user3 from '@/assets/images/user3.png'
 
+import male from '@/assets/images/maleShopper.jpg'
+import female from '@/assets/images/femaleShopper.jpg'
+
+
+
 // import { getUser, login } from '../requests'
 function updateLocalStorage(cart) {
   localStorage.setItem('cart', JSON.stringify(cart))
@@ -58,7 +63,7 @@ export default createStore({
       },
       {
         id: 4,
-        name: "Chelsea",
+        name: "Chelsea Boots",
         category: "Footwears",
         ratings: 4,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
@@ -91,20 +96,20 @@ export default createStore({
       {
         id: 1,
         name: "For woman",
-        image: sneakers,
+        image: female,
         discount: "Up to 20% off",
       },
       {
         id: 2,
         name: "For man",
-        image: trouser,
+        image: male,
         discount: "Up to 30% off",
       },
     ],
     reviews: [
       {
         id: 1,
-        name: "John Doe",
+        name: "Andy Doe",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
         title: "Delighted Customer",
         ratings: 4,

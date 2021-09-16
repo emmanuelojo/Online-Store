@@ -1,8 +1,16 @@
 <template>
   <div class="hero">
     <h3><span> Featured </span> Products</h3>
+    <!-- <h4> Provide/Inject {{  searchWord }} </h4> -->
     <!-- <h4> Provide/Inject {{  searchTitle }} </h4>
     <h4> Provide/Inject {{  searchName}} </h4> -->
+
+
+    <!-- <input
+        type="text"
+        v-model="search"
+        placeholder="Search ..."
+      /> -->
     <div class="noItem" v-if="!getProducts.length">
       <div class="col-8">
         <h3>No product with that name</h3>
@@ -56,7 +64,10 @@ export default {
   // props: {
   //   search: String
   // },
+  // inject: ['searchWord'],
+  
   props: ["search"],
+
   // data() {
   //   return {
   //     search: "",
@@ -72,7 +83,7 @@ export default {
 
     filteredProducts() {
       return this.getProducts.filter((product) => {
-        return product.name.toLowerCase().includes(this.modelValue.toLowerCase());
+        return product.name.toLowerCase().includes(this.search.toLowerCase());
       });
     },
 

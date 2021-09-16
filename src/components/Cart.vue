@@ -32,7 +32,7 @@
 
         <div class="d-flex justify-content-between">
           <span>Total: ₦{{ cartTotalPrice.toFixed(2) }}</span>
-          <a href="#" @click.prevent="clearCartItems()">Clear Tray</a>
+          <a href="#" @click.prevent="clearCartItems()">Clear Cart</a>
         </div>
 
         <stripe-checkout

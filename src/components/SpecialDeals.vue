@@ -4,7 +4,7 @@
     <hr>
     <div class="deal">
       <div class="deal-info">
-        <p>upto 50% off</p>
+        <p>up to 50% off</p>
         <h3>Deal of the day</h3>
         <div id="countdown">
           <ul>

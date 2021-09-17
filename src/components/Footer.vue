@@ -39,7 +39,7 @@
     </div>
     <hr>
     <div class="footer">
-      <p> Created by <span> <a href="https://emmanuelojo.github.io/"> 007 </a> </span> | All Rights Reserved</p>
+      <p> Created by <span> <a href="https://emmanuelojo.github.io/"> 007 </a> </span> | With  a  big &#128151; </p>
     </div>
   </div>
 </template>

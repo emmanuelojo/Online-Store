@@ -95,13 +95,13 @@ export default createStore({
     categories: [
       {
         id: 1,
-        name: "For woman",
+        name: "For women",
         image: female,
         discount: "Up to 20% off",
       },
       {
         id: 2,
-        name: "For man",
+        name: "For men",
         image: male,
         discount: "Up to 30% off",
       },

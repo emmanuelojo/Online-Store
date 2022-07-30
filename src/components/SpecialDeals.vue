@@ -50,6 +50,13 @@ export default {
             (document.getElementById("seconds").innerText = Math.floor(
               (distance % minute) / second
             ));
+            
+            if(distance <= 0){
+              document.getElementById("days").innerText = 0
+              document.getElementById("hours").innerText =  0
+              document.getElementById("minutes").innerText = 0
+              document.getElementById("seconds").innerText = 0
+            }
 
           //do something later when date is reached
           if (distance < 0) {
